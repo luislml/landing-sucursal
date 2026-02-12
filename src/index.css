@@ -1,0 +1,53 @@
+@import "tailwindcss";
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap');
+
+@theme {
+  /* Aquí registramos tus colores para que Tailwind cree las clases bg-primary, bg-dark, etc. */
+  --color-primary: #D4AF37;
+  --color-primary-dark: #B8860B;
+  --color-dark: #0A0A0A;
+  --color-dark-lighter: #1A1A1A;
+
+  /* Fuentes */
+  --font-sans: "Inter", ui-sans-serif, system-ui;
+  --font-serif: "Playfair Display", ui-serif, Georgia;
+}
+
+
+
+@layer base {
+
+  /* Eliminamos @tailwind base/components/utilities porque ya están en @import "tailwindcss" */
+  body {
+    @apply bg-dark text-white font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+  }
+
+  .btn-gold {
+    @apply bg-primary hover:bg-primary-dark text-black font-bold py-3 px-8 rounded-full transition-all duration-300;
+  }
+
+  .nav-link {
+    @apply text-white/70 hover:text-white transition-colors duration-200 cursor-pointer;
+  }
+}
+
+/* Estilos para Pannellum */
+.pnlm-container {
+  border-radius: 1rem;
+}
