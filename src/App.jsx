@@ -77,16 +77,9 @@ import Login from './components/Login'
 import AdminPanel from './components/AdminDashboard'
 
 function App() {
-  const [floors, setFloors] = useState(() => {
-    const saved = localStorage.getItem('luxury_suites_data')
-    return saved ? JSON.parse(saved) : INITIAL_DATA
-  })
+  const [floors, setFloors] = useState(INITIAL_DATA)
 
   const [view, setView] = useState('landing') // 'landing', 'login', 'admin'
-
-  useEffect(() => {
-    localStorage.setItem('luxury_suites_data', JSON.stringify(floors))
-  }, [floors])
 
   // Load Pannellum script dynamically to ensure it's available for the 3D viewer
   useEffect(() => {
