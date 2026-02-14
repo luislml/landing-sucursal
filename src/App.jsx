@@ -15,7 +15,7 @@ const INITIAL_DATA = [
         title: 'Local PB-01 - Flagship',
         price: '$2,500',
         status: 'Disponible',
-        image: '/360/1.png',
+        image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=60&w=600',
         panoramaUrl: '/360/1.png',
         specs: { size: '12m x 15m', area: '180m²', type: 'Retail / Showroom' }
       },
@@ -24,7 +24,7 @@ const INITIAL_DATA = [
         title: 'Local PB-02 - Boutique',
         price: '$1,800',
         status: 'Mantenimiento',
-        image: '/360/2.png',
+        image: 'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&q=60&w=600',
         panoramaUrl: '/360/2.png',
         specs: { size: '8m x 10m', area: '80m²', type: 'Moda / Accesorios' }
       }
@@ -40,7 +40,7 @@ const INITIAL_DATA = [
         title: 'Oficina 101 - Consultoría',
         price: '$1,200',
         status: 'Disponible',
-        image: '/360/3.png',
+        image: 'https://images.unsplash.com/photo-1582653280643-e77c738edec1?auto=format&fit=crop&q=60&w=600',
         panoramaUrl: '/360/3.png',
         specs: { size: '6m x 10m', area: '60m²', type: 'Bufete / Agencia' }
       },
@@ -49,7 +49,7 @@ const INITIAL_DATA = [
         title: 'Oficina 102 - Studio',
         price: '$950',
         status: 'Alquilado',
-        image: '/360/4.png',
+        image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=60&w=600',
         panoramaUrl: '/360/4.png',
         specs: { size: '5m x 7m', area: '35m²', type: 'Administrativo' }
       }
@@ -65,7 +65,7 @@ const INITIAL_DATA = [
         title: 'Suite 201 - Executive',
         price: '$1,500',
         status: 'Disponible',
-        image: '/360/5.png',
+        image: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=60&w=600',
         panoramaUrl: '/360/5.png',
         specs: { size: '8m x 12m', area: '96m²', type: 'Corporativo' }
       }
@@ -80,24 +80,6 @@ function App() {
   const [floors, setFloors] = useState(INITIAL_DATA)
 
   const [view, setView] = useState('landing') // 'landing', 'login', 'admin'
-
-  // Load Pannellum script dynamically to ensure it's available for the 3D viewer
-  useEffect(() => {
-    const script = document.createElement('script')
-    script.src = 'https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js'
-    script.async = true
-    document.body.appendChild(script)
-
-    const link = document.createElement('link')
-    link.rel = 'stylesheet'
-    link.href = 'https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css'
-    document.head.appendChild(link)
-
-    return () => {
-      document.body.removeChild(script)
-      document.head.removeChild(link)
-    }
-  }, [])
 
   if (view === 'login') return (
     <Login
