@@ -28,7 +28,7 @@ const RoomModal3D = ({ isOpen, onClose, room }) => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10"
+                    className="fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-10"
                 >
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-black/95 backdrop-blur-sm" onClick={onClose} />
@@ -37,13 +37,13 @@ const RoomModal3D = ({ isOpen, onClose, room }) => {
                         initial={{ scale: 0.9, opacity: 0, y: 20 }}
                         animate={{ scale: 1, opacity: 1, y: 0 }}
                         exit={{ scale: 0.9, opacity: 0, y: 20 }}
-                        className="relative w-full max-w-6xl aspect-video glass-card border-white/20 overflow-hidden z-10"
+                        className="relative w-full h-[70vh] md:h-auto md:max-w-6xl md:aspect-video glass-card border-white/20 overflow-hidden z-10"
                     >
                         {/* Header info */}
                         <div className="absolute top-0 left-0 right-0 p-6 bg-gradient-to-b from-black/80 to-transparent z-20 flex justify-between items-start">
                             <div>
-                                <h3 className="text-2xl font-serif font-bold text-white mb-1">{room.title} - Tour 360°</h3>
-                                <p className="text-white/60 text-sm">Usa el mouse o el tacto para explorar la habitación</p>
+                                <h3 className="text-lg md:text-2xl font-serif font-bold text-white mb-1">{room.title} - Tour 360°</h3>
+                                <p className="text-white/60 text-[10px] md:text-sm">Explora el espacio deslizando la pantalla</p>
                             </div>
                             <button
                                 onClick={onClose}

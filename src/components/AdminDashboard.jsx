@@ -9,7 +9,8 @@ import {
     AlertCircle,
     Edit3,
     X,
-    Plus
+    Plus,
+    Maximize
 } from 'lucide-react'
 
 const AdminDashboard = ({ floors, onUpdateFloors, onLogout }) => {
@@ -193,17 +194,31 @@ const AdminDashboard = ({ floors, onUpdateFloors, onLogout }) => {
                                 </div>
 
                                 {/* Image URL */}
-                                <div className="space-y-2">
-                                    <label className="text-[10px] uppercase tracking-widest text-white/40 font-bold ml-1 flex items-center">
-                                        <ImageIcon size={10} className="mr-1" /> URL de la Imagen
-                                    </label>
-                                    <input
-                                        type="text"
-                                        value={formData.image}
-                                        onChange={(e) => setFormData({ ...formData, image: e.target.value })}
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors text-xs"
-                                    />
-                                    <p className="text-[9px] text-white/20 italic ml-1">* Recomendado: Unsplash o URL directa de alta calidad.</p>
+                                <div className="space-y-4">
+                                    <div className="space-y-2">
+                                        <label className="text-[10px] uppercase tracking-widest text-white/40 font-bold ml-1 flex items-center">
+                                            <ImageIcon size={10} className="mr-1" /> Portada (Miniatura)
+                                        </label>
+                                        <input
+                                            type="text"
+                                            value={formData.image}
+                                            onChange={(e) => setFormData({ ...formData, image: e.target.value })}
+                                            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors text-xs"
+                                        />
+                                    </div>
+
+                                    <div className="space-y-2">
+                                        <label className="text-[10px] uppercase tracking-widest text-white/40 font-bold ml-1 flex items-center text-primary">
+                                            <Maximize size={10} className="mr-1" /> Panorama 360° (Pannellum)
+                                        </label>
+                                        <input
+                                            type="text"
+                                            value={formData.panoramaUrl}
+                                            onChange={(e) => setFormData({ ...formData, panoramaUrl: e.target.value })}
+                                            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 transition-colors text-xs"
+                                        />
+                                    </div>
+                                    <p className="text-[9px] text-white/20 italic ml-1">* Rutas locales sugeridas: `/360/1.png`, `/360/2.png`, etc.</p>
                                 </div>
 
                                 <div className="pt-4 flex space-x-4">

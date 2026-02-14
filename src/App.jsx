@@ -15,17 +15,17 @@ const INITIAL_DATA = [
         title: 'Local PB-01 - Flagship',
         price: '$2,500',
         status: 'Disponible',
-        image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=1000',
-        panoramaUrl: 'https://pannellum.org/images/alma.jpg',
+        image: '/360/1.png',
+        panoramaUrl: '/360/1.png',
         specs: { size: '12m x 15m', area: '180m²', type: 'Retail / Showroom' }
       },
       {
         id: 2,
         title: 'Local PB-02 - Boutique',
         price: '$1,800',
-        status: 'Disponible',
-        image: 'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&q=80&w=1000',
-        panoramaUrl: 'https://pannellum.org/images/m_and_m.jpg',
+        status: 'Mantenimiento',
+        image: '/360/2.png',
+        panoramaUrl: '/360/2.png',
         specs: { size: '8m x 10m', area: '80m²', type: 'Moda / Accesorios' }
       }
     ]
@@ -40,8 +40,8 @@ const INITIAL_DATA = [
         title: 'Oficina 101 - Consultoría',
         price: '$1,200',
         status: 'Disponible',
-        image: 'https://images.unsplash.com/photo-1582653280643-e77c738edec1?auto=format&fit=crop&q=80&w=1000',
-        panoramaUrl: 'https://pannellum.org/images/alma.jpg',
+        image: '/360/3.png',
+        panoramaUrl: '/360/3.png',
         specs: { size: '6m x 10m', area: '60m²', type: 'Bufete / Agencia' }
       },
       {
@@ -49,8 +49,8 @@ const INITIAL_DATA = [
         title: 'Oficina 102 - Studio',
         price: '$950',
         status: 'Alquilado',
-        image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000',
-        panoramaUrl: 'https://pannellum.org/images/jure-pribicevic.jpg',
+        image: '/360/4.png',
+        panoramaUrl: '/360/4.png',
         specs: { size: '5m x 7m', area: '35m²', type: 'Administrativo' }
       }
     ]
@@ -65,8 +65,8 @@ const INITIAL_DATA = [
         title: 'Suite 201 - Executive',
         price: '$1,500',
         status: 'Disponible',
-        image: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=1000',
-        panoramaUrl: 'https://pannellum.org/images/alma.jpg',
+        image: '/360/5.png',
+        panoramaUrl: '/360/5.png',
         specs: { size: '8m x 12m', area: '96m²', type: 'Corporativo' }
       }
     ]

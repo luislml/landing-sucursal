@@ -54,17 +54,6 @@ const Hero = () => {
 
                 </div>
             </div>
-
-            {/* Floating element */}
-            <motion.div
-                animate={{ y: [0, -20, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="hidden lg:block absolute right-20 bottom-20 w-64 p-6 glass-card border-primary/20"
-            >
-                <div className="text-primary mb-2">★★★★★</div>
-                <p className="text-sm italic text-white/80">"La mejor inversión que he hecho. El visor 3D me convenció antes de visitar el lugar."</p>
-                <p className="text-xs mt-4 font-bold">- Roberto Sánchez</p>
-            </motion.div>
         </section>
     )
 }
